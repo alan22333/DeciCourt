@@ -1,5 +1,7 @@
 # 🏛️ DeciCourt - 去中心化法庭系统
 
+[English](./README_EN.md) | 中文
+
 [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 [![Solidity](https://img.shields.io/badge/Solidity-0.8.19-blue.svg)](https://soliditylang.org/)
 [![Next.js](https://img.shields.io/badge/Next.js-14.0-black.svg)](https://nextjs.org/)
@@ -300,10 +302,21 @@ npm test
 - **产品团队**：用户体验设计和产品规划
 - **社区团队**：社区建设和生态发展
 
+## 📞 联系我们
+
+- **项目主页**：[https://github.com/your-username/DeciCourt](https://github.com/your-username/DeciCourt)
+- **文档站点**：[https://decicourt.docs.com](https://decicourt.docs.com)
+- **社区论坛**：[https://forum.decicourt.com](https://forum.decicourt.com)
+- **邮箱**：contact@decicourt.com
 
 ## 🙏 致谢
 
-感谢所有为项目做出贡献的开发者、测试者和社区成员。特别感谢：alan223
+感谢所有为项目做出贡献的开发者、测试者和社区成员。特别感谢：
+
+- OpenZeppelin 团队提供的安全合约库
+- Hardhat 团队提供的优秀开发框架
+- Next.js 团队提供的强大前端框架
+- 所有参与测试和反馈的社区成员
 
 ---
 
