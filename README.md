@@ -1,6 +1,6 @@
 # 🏛️ DeciCourt - 去中心化法庭系统
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 [![Solidity](https://img.shields.io/badge/Solidity-0.8.19-blue.svg)](https://soliditylang.org/)
 [![Next.js](https://img.shields.io/badge/Next.js-14.0-black.svg)](https://nextjs.org/)
 [![Hardhat](https://img.shields.io/badge/Hardhat-2.19-orange.svg)](https://hardhat.org/)
@@ -286,9 +286,12 @@ npm test
 
 ## 📄 许可证
 
-本项目采用 [MIT 许可证](LICENSE) - 查看 LICENSE 文件了解详情
+本项目采用 [CC BY-NC-SA 4.0 许可证](LICENSE) 开源，禁止商业用途。
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)。
+- ✅ 允许个人使用和学习
+- ✅ 允许修改和分发
+- ✅ 要求署名和相同许可证分发
+- ❌ 禁止商业用途
 
 ## 👥 团队
 
