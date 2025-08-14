@@ -1,0 +1,604 @@
+/* 新拟态风格样式 - 增强版 */
+.neumorphism-bg {
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 50%, #f0f4f8 100%);
+  min-height: 100vh;
+  position: relative;
+  color: #2d3748;
+}
+
+.neumorphism-bg::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(120, 219, 255, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.neumorphism-container {
+  background: #ffffff;
+  border-radius: 24px;
+  box-shadow: 
+    24px 24px 48px rgba(0, 0, 0, 0.08),
+    -24px -24px 48px rgba(255, 255, 255, 1),
+    inset 1px 1px 2px rgba(255, 255, 255, 0.9);
+  padding: 2rem;
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+  color: #2d3748;
+}
+
+.neumorphism-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), transparent);
+}
+
+.neumorphism-card {
+  background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+  border-radius: 20px;
+  box-shadow: 
+    15px 15px 30px rgba(0, 0, 0, 0.06),
+    -15px -15px 30px rgba(255, 255, 255, 1),
+    inset 1px 1px 2px rgba(255, 255, 255, 0.9),
+    inset -1px -1px 2px rgba(0, 0, 0, 0.02);
+  padding: 1.5rem;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+  color: #2d3748;
+}
+
+.neumorphism-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent);
+}
+
+.neumorphism-card:hover {
+  box-shadow: 
+    20px 20px 40px rgba(0, 0, 0, 0.15),
+    -20px -20px 40px rgba(255, 255, 255, 0.95),
+    inset 2px 2px 4px rgba(255, 255, 255, 0.9),
+    inset -2px -2px 4px rgba(0, 0, 0, 0.08);
+  transform: translateY(-3px) scale(1.02);
+}
+
+.neumorphism-card-inner {
+  background: linear-gradient(145deg, #ffffff 0%, #f7fafc 100%);
+  border-radius: 16px;
+  box-shadow: 
+    10px 10px 20px rgba(0, 0, 0, 0.05),
+    -10px -10px 20px rgba(255, 255, 255, 1),
+    inset 1px 1px 2px rgba(255, 255, 255, 0.9);
+  padding: 1rem;
+  transition: all 0.3s ease;
+  position: relative;
+  color: #2d3748;
+}
+
+/* 不同主题的卡片变体 */
+.neumorphism-card.primary {
+  background: linear-gradient(145deg, #f7fafc 0%, #edf2f7 100%);
+  border-left: 4px solid #667eea;
+}
+
+.neumorphism-card.success {
+  background: linear-gradient(145deg, #f0fff4 0%, #e6fffa 100%);
+  border-left: 4px solid #48bb78;
+}
+
+.neumorphism-card.warning {
+  background: linear-gradient(145deg, #fffaf0 0%, #fef5e7 100%);
+  border-left: 4px solid #ed8936;
+}
+
+.neumorphism-card.info {
+  background: linear-gradient(145deg, #ebf8ff 0%, #bee3f8 100%);
+  border-left: 4px solid #4299e1;
+}
+
+.neumorphism-card-inner:hover {
+  box-shadow: 
+    12px 12px 24px rgba(0, 0, 0, 0.1),
+    -12px -12px 24px rgba(255, 255, 255, 0.9),
+    inset 2px 2px 4px rgba(255, 255, 255, 0.8);
+  transform: translateY(-1px);
+}
+
+.neumorphism-button {
+  background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+  border: none;
+  border-radius: 14px;
+  box-shadow: 
+    8px 8px 16px rgba(0, 0, 0, 0.06),
+    -8px -8px 16px rgba(255, 255, 255, 1),
+    inset 1px 1px 2px rgba(255, 255, 255, 0.9);
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  font-weight: 500;
+  position: relative;
+  overflow: hidden;
+  color: #2d3748;
+}
+
+.neumorphism-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  transition: left 0.5s;
+}
+
+.neumorphism-button:hover::before {
+  left: 100%;
+}
+
+.neumorphism-button:hover {
+  box-shadow: 
+    6px 6px 12px rgba(0, 0, 0, 0.12),
+    -6px -6px 12px rgba(255, 255, 255, 0.95),
+    inset 2px 2px 4px rgba(255, 255, 255, 0.9);
+  transform: translateY(-2px) scale(1.05);
+}
+
+.neumorphism-button:active {
+  box-shadow: 
+    inset 6px 6px 12px rgba(0, 0, 0, 0.15),
+    inset -6px -6px 12px rgba(255, 255, 255, 0.9);
+  transform: translateY(0) scale(0.98);
+}
+
+.neumorphism-button-primary {
+  background: linear-gradient(145deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 14px;
+  box-shadow: 
+    8px 8px 16px rgba(102, 126, 234, 0.3),
+    -8px -8px 16px rgba(255, 255, 255, 0.1),
+    inset 1px 1px 2px rgba(255, 255, 255, 0.3);
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  font-weight: 500;
+  position: relative;
+  overflow: hidden;
+}
+
+.neumorphism-button-primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.5s;
+}
+
+.neumorphism-button-primary:hover::before {
+  left: 100%;
+}
+
+.neumorphism-button-primary:hover {
+  background: linear-gradient(145deg, #5a67d8 0%, #6b46c1 100%);
+  box-shadow: 
+    10px 10px 20px rgba(102, 126, 234, 0.4),
+    -10px -10px 20px rgba(255, 255, 255, 0.05),
+    inset 2px 2px 4px rgba(255, 255, 255, 0.4);
+  transform: translateY(-3px) scale(1.05);
+}
+
+.neumorphism-button-secondary {
+  background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+  color: #2d3748;
+  border: none;
+  border-radius: 14px;
+  box-shadow: 
+    8px 8px 16px rgba(0, 0, 0, 0.06),
+    -8px -8px 16px rgba(255, 255, 255, 1),
+    inset 1px 1px 2px rgba(255, 255, 255, 0.9);
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  font-weight: 500;
+  position: relative;
+  overflow: hidden;
+}
+
+.neumorphism-button-secondary:hover {
+  background: linear-gradient(145deg, #f8fafc 0%, #f0f4f8 100%);
+  box-shadow: 
+    6px 6px 12px rgba(0, 0, 0, 0.08),
+    -6px -6px 12px rgba(255, 255, 255, 1),
+    inset 2px 2px 4px rgba(255, 255, 255, 0.95);
+  transform: translateY(-2px) scale(1.05);
+}
+
+/* 不同颜色主题的按钮 */
+.neumorphism-button-success {
+  background: linear-gradient(145deg, #48bb78 0%, #38a169 100%);
+  color: white;
+  border: none;
+  border-radius: 14px;
+  box-shadow: 
+    8px 8px 16px rgba(72, 187, 120, 0.3),
+    -8px -8px 16px rgba(255, 255, 255, 0.1),
+    inset 1px 1px 2px rgba(255, 255, 255, 0.3);
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  font-weight: 500;
+  position: relative;
+  overflow: hidden;
+}
+
+.neumorphism-button-success:hover {
+  background: linear-gradient(145deg, #38a169 0%, #2f855a 100%);
+  box-shadow: 
+    10px 10px 20px rgba(72, 187, 120, 0.4),
+    -10px -10px 20px rgba(255, 255, 255, 0.05),
+    inset 2px 2px 4px rgba(255, 255, 255, 0.4);
+  transform: translateY(-3px) scale(1.05);
+}
+
+.neumorphism-button-warning {
+  background: linear-gradient(145deg, #ed8936 0%, #dd6b20 100%);
+  color: white;
+  border: none;
+  border-radius: 14px;
+  box-shadow: 
+    8px 8px 16px rgba(237, 137, 54, 0.3),
+    -8px -8px 16px rgba(255, 255, 255, 0.1),
+    inset 1px 1px 2px rgba(255, 255, 255, 0.3);
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  font-weight: 500;
+  position: relative;
+  overflow: hidden;
+}
+
+.neumorphism-button-warning:hover {
+  background: linear-gradient(145deg, #dd6b20 0%, #c05621 100%);
+  box-shadow: 
+    10px 10px 20px rgba(237, 137, 54, 0.4),
+    -10px -10px 20px rgba(255, 255, 255, 0.05),
+    inset 2px 2px 4px rgba(255, 255, 255, 0.4);
+  transform: translateY(-3px) scale(1.05);
+}
+
+.neumorphism-button-danger {
+  background: linear-gradient(145deg, #f56565 0%, #e53e3e 100%);
+  color: white;
+  border: none;
+  border-radius: 14px;
+  box-shadow: 
+    8px 8px 16px rgba(245, 101, 101, 0.3),
+    -8px -8px 16px rgba(255, 255, 255, 0.1),
+    inset 1px 1px 2px rgba(255, 255, 255, 0.3);
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  font-weight: 500;
+  position: relative;
+  overflow: hidden;
+}
+
+.neumorphism-button-danger:hover {
+  background: linear-gradient(145deg, #e53e3e 0%, #c53030 100%);
+  box-shadow: 
+    10px 10px 20px rgba(245, 101, 101, 0.4),
+    -10px -10px 20px rgba(255, 255, 255, 0.05),
+    inset 2px 2px 4px rgba(255, 255, 255, 0.4);
+  transform: translateY(-3px) scale(1.05);
+}
+
+.neumorphism-input {
+  background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+  border: none;
+  border-radius: 14px;
+  box-shadow: 
+    inset 8px 8px 16px rgba(0, 0, 0, 0.06),
+    inset -8px -8px 16px rgba(255, 255, 255, 1),
+    1px 1px 2px rgba(255, 255, 255, 0.9);
+  padding: 0.75rem 1rem;
+  transition: all 0.3s ease;
+  width: 100%;
+  position: relative;
+  color: #2d3748;
+}
+
+.neumorphism-input:focus {
+  outline: none;
+  box-shadow: 
+    inset 10px 10px 20px rgba(0, 0, 0, 0.12),
+    inset -10px -10px 20px rgba(255, 255, 255, 0.95),
+    0 0 0 3px rgba(102, 126, 234, 0.2),
+    0 0 20px rgba(102, 126, 234, 0.1);
+}
+
+.neumorphism-nav {
+  background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+  border-radius: 0 0 24px 24px;
+  box-shadow: 
+    0 10px 20px rgba(0, 0, 0, 0.06),
+    0 -2px 4px rgba(255, 255, 255, 1),
+    inset 0 1px 2px rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  position: relative;
+  color: #2d3748;
+}
+
+.neumorphism-nav::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  right: 10%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(102, 126, 234, 0.3), transparent);
+}
+
+.neumorphism-nav-button {
+  background: transparent;
+  border: none;
+  border-radius: 12px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+  color: #4a5568;
+  font-weight: 600;
+}
+
+.neumorphism-nav-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.5s;
+}
+
+.neumorphism-nav-button:hover::before {
+  left: 100%;
+}
+
+.neumorphism-nav-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 
+    6px 6px 12px rgba(0, 0, 0, 0.08),
+    -6px -6px 12px rgba(255, 255, 255, 0.8);
+  transform: translateY(-1px);
+  color: #2d3748;
+}
+
+.neumorphism-nav-button.active {
+  background: linear-gradient(145deg, #667eea 0%, #764ba2 100%);
+  box-shadow: 
+    inset 6px 6px 12px rgba(0, 0, 0, 0.1),
+    inset -6px -6px 12px rgba(255, 255, 255, 0.9);
+  color: white !important;
+  font-weight: 700;
+}
+
+.neumorphism-stat-card {
+  background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+  border-radius: 20px;
+  box-shadow: 
+    12px 12px 24px rgba(0, 0, 0, 0.08),
+    -12px -12px 24px rgba(255, 255, 255, 1),
+    inset 1px 1px 2px rgba(255, 255, 255, 0.9);
+  padding: 1.5rem;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+  color: #2d3748;
+}
+
+.neumorphism-stat-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #667eea, #764ba2, #f093fb);
+  border-radius: 20px 20px 0 0;
+}
+
+/* 不同颜色主题的统计卡片 */
+.neumorphism-stat-card.blue::before {
+  background: linear-gradient(90deg, #4299e1, #3182ce, #2b77cb);
+}
+
+.neumorphism-stat-card.green::before {
+  background: linear-gradient(90deg, #48bb78, #38a169, #2f855a);
+}
+
+.neumorphism-stat-card.yellow::before {
+  background: linear-gradient(90deg, #ed8936, #dd6b20, #c05621);
+}
+
+.neumorphism-stat-card.purple::before {
+  background: linear-gradient(90deg, #9f7aea, #805ad5, #6b46c1);
+}
+
+.neumorphism-stat-card.red::before {
+  background: linear-gradient(90deg, #f56565, #e53e3e, #c53030);
+}
+
+.neumorphism-stat-card.indigo::before {
+  background: linear-gradient(90deg, #667eea, #5a67d8, #4c51bf);
+}
+
+.neumorphism-stat-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(145deg, transparent 0%, rgba(255, 255, 255, 0.1) 50%, transparent 100%);
+  pointer-events: none;
+}
+
+.neumorphism-stat-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 
+    18px 18px 36px rgba(0, 0, 0, 0.18),
+    -18px -18px 36px rgba(255, 255, 255, 0.95),
+    inset 2px 2px 4px rgba(255, 255, 255, 0.9);
+}
+
+.neumorphism-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+  box-shadow: 
+    8px 8px 16px rgba(0, 0, 0, 0.06),
+    -8px -8px 16px rgba(255, 255, 255, 1),
+    inset 1px 1px 2px rgba(255, 255, 255, 0.9);
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+  color: #2d3748;
+}
+
+.neumorphism-icon:hover {
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 
+    10px 10px 20px rgba(0, 0, 0, 0.15),
+    -10px -10px 20px rgba(255, 255, 255, 0.95);
+}
+
+.neumorphism-inset {
+  background: linear-gradient(145deg, #f8fafc 0%, #f0f4f8 100%);
+  border-radius: 14px;
+  box-shadow: 
+    inset 8px 8px 16px rgba(0, 0, 0, 0.06),
+    inset -8px -8px 16px rgba(255, 255, 255, 1),
+    1px 1px 2px rgba(255, 255, 255, 0.9);
+  padding: 1rem;
+  position: relative;
+  color: #2d3748;
+}
+
+.neumorphism-table {
+  background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+  border-radius: 20px;
+  box-shadow: 
+    10px 10px 20px rgba(0, 0, 0, 0.06),
+    -10px -10px 20px rgba(255, 255, 255, 1),
+    inset 1px 1px 2px rgba(255, 255, 255, 0.9);
+  overflow: hidden;
+  position: relative;
+  color: #2d3748;
+}
+
+.neumorphism-table-header {
+  background: linear-gradient(145deg, #f8fafc 0%, #f0f4f8 100%);
+  box-shadow: 
+    0 2px 4px rgba(0, 0, 0, 0.05),
+    inset 0 1px 2px rgba(255, 255, 255, 0.9);
+  color: #2d3748;
+}
+
+.neumorphism-badge {
+  background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+  border-radius: 25px;
+  box-shadow: 
+    6px 6px 12px rgba(0, 0, 0, 0.05),
+    -6px -6px 12px rgba(255, 255, 255, 1),
+    inset 1px 1px 2px rgba(255, 255, 255, 0.9);
+  padding: 0.25rem 0.75rem;
+  display: inline-block;
+  transition: all 0.3s ease;
+  color: #2d3748;
+}
+
+.neumorphism-badge:hover {
+  transform: scale(1.05);
+  box-shadow: 
+    8px 8px 16px rgba(0, 0, 0, 0.1),
+    -8px -8px 16px rgba(255, 255, 255, 0.9);
+}
+
+.neumorphism-indicator {
+  border-radius: 25px;
+  box-shadow: 
+    6px 6px 12px rgba(0, 0, 0, 0.05),
+    -6px -6px 12px rgba(255, 255, 255, 1),
+    inset 1px 1px 2px rgba(255, 255, 255, 0.9);
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  color: #2d3748;
+}
+
+.neumorphism-indicator::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.5s;
+}
+
+.neumorphism-indicator:hover::before {
+  left: 100%;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  .neumorphism-card {
+    border-radius: 15px;
+    box-shadow: 
+      10px 10px 20px rgba(0, 0, 0, 0.04),
+      -10px -10px 20px rgba(255, 255, 255, 1);
+  }
+  
+  .neumorphism-button {
+    border-radius: 12px;
+    box-shadow: 
+      6px 6px 12px rgba(0, 0, 0, 0.04),
+      -6px -6px 12px rgba(255, 255, 255, 1);
+  }
+  
+  .neumorphism-stat-card {
+    border-radius: 16px;
+    box-shadow: 
+      8px 8px 16px rgba(0, 0, 0, 0.05),
+      -8px -8px 16px rgba(255, 255, 255, 1);
+  }
+}
