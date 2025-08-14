@@ -295,28 +295,11 @@ This project is licensed under [CC BY-NC-SA 4.0 License](LICENSE), prohibiting c
 - ✅ Requires attribution and same license distribution
 - ❌ Prohibits commercial use
 
-## 👥 Team
-
-- **Core Development Team**: Responsible for system architecture and core feature development
-- **Security Team**: Focused on smart contract security and auditing
-- **Product Team**: User experience design and product planning
-- **Community Team**: Community building and ecosystem development
-
-## 📞 Contact Us
-
-- **Project Homepage**: [https://gitee.com/alan223/deci-court](https://gitee.com/alan223/deci-court)
-- **Documentation Site**: [https://decicourt.docs.com](https://decicourt.docs.com)
-- **Community Forum**: [https://forum.decicourt.com](https://forum.decicourt.com)
-- **Email**: contact@decicourt.com
-
 ## 🙏 Acknowledgments
 
 Thanks to all developers, testers, and community members who contributed to the project. Special thanks to:
 
-- OpenZeppelin team for providing secure contract libraries
-- Hardhat team for providing excellent development framework
-- Next.js team for providing powerful frontend framework
-- All community members who participated in testing and feedback
+alan223
 
 ---
 
