@@ -13,6 +13,10 @@ module.exports = {
     }
   },
   networks: {
-    hardhat: {}
+    hardhat: {
+      accounts: {
+        count: 20 // 增加测试账户数量到20个
+      }
+    }
   }
 };
